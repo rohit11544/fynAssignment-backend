@@ -160,8 +160,7 @@ app.use("/price/:distance/:time", async (req, res) => {
   });
 });
 
-const CONNECTION_URL =
-  "mongodb+srv://rohit11544:rohit123@cluster0.qmciq.mongodb.net/fyn?retryWrites=true&w=majority";
+const CONNECTION_URL = process.env.MONGO_URL;
 
 const PORT = process.env.PORT || 5000;
 
