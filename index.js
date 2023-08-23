@@ -7,6 +7,7 @@ dotenv.config();
 import adminRoutes from "./routes/Admin.js";
 import configEnableRouts from "./routes/PricingConfigEnable.js";
 import PriceConfigRouts from "./routes/PriceConfig.js";
+import RaidRouts from "./routes/Raid.js";
 import PriceConfigEnableDetails from "./models/PricingConfigEnable.js";
 import PriceConfigDetails from "./models/PriceConfig.js";
 
@@ -36,6 +37,7 @@ app.get("/", (req, res) => {
 app.use("/admin", adminRoutes);
 app.use("/configEnable", configEnableRouts);
 app.use("/priceConfig", PriceConfigRouts);
+app.use("/raid", RaidRouts);
 
 // API to calculate the price
 app.use("/price/:distance/:time", async (req, res) => {
